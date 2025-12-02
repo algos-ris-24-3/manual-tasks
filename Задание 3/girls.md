@@ -32,9 +32,14 @@ $$
 $$
 \Delta_n = \lambda^n.\
 \lambda^n = -\lambda^{n-1} + 6\lambda^{n-2}\
+$$
 
-Делим обе части на \[\lambda^{n-2}\
+Делим обе части на
+$$ 
+\[\lambda^{n-2}\
+$$
 
+$$
 \lambda^2 = -\lambda + 6\
 \lambda^2 + \lambda - 6 = 0\
 \lambda_1 + \lambda_2 = -1\
