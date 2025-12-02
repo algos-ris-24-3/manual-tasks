@@ -75,6 +75,8 @@ $$
 ## 4.Заготовка общей формулы: 
 $$
 \Delta_n = C_1 \cdot \lambda_1^n + C_2 \cdot \lambda_2^n\ 
+$$
+$$
 \Delta_n = C_1 \cdot (-3)^n + C_2 \cdot 2^n\
 $$
 
