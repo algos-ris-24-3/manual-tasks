@@ -1,4 +1,4 @@
-# Вариант 2:
+# Вариант 2
 
 | Задания      |  A  |  B  |  C  |  D  |  E  |  F  |
 |:-------------|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -108,3 +108,73 @@ t = 3
 **Длительность полученного расписания: 8 часов**
 
 ## Диаграмма Ганта
+
+```mermaid
+gantt
+    title Диаграмма Ганта
+    dateFormat HH:mm
+    axisFormat %H:%M
+
+    section Исполнитель 1
+    A :t1_1, 00:00, 2h
+    A :t1_2, after t1_1, 1h
+    A :t1_3, after t1_2, 0.4h
+    B :t1_4, after t1_3, 0.4h
+    C :t1_5, after t1_4, 0.4h
+    D :t1_6, after t1_5, 0.4h
+    E :t1_7, after t1_6, 0.4h
+    A :t1_8, after t1_7, 0.5h
+    B :t1_9, after t1_8, 0.5h
+    C :t1_10, after t1_9, 0.5h
+    D :t1_11, after t1_10, 0.5h
+    E :t1_12, after t1_11, 0.5h
+    F :t1_13, after t1_12, 0.5h
+
+    section Исполнитель 2
+    B :t2_1, 00:00, 2h
+    B :t2_2, after t2_1, 1h
+    E :t2_3, after t2_2, 0.4h
+    A :t2_4, after t2_3, 0.4h
+    B :t2_5, after t2_4, 0.4h
+    C :t2_6, after t2_5, 0.4h
+    D :t2_7, after t2_6, 0.4h
+    F :t2_8, after t2_7, 0.5h
+    A :t2_9, after t2_8, 0.5h
+    B :t2_10, after t2_9, 0.5h
+    C :t2_11, after t2_10, 0.5h
+    D :t2_12, after t2_11, 0.5h
+    E :t2_13, after t2_12, 0.5h
+
+    section Исполнитель 3
+    C :t3_1, 00:00, 2h
+    C :t3_2, after t3_1, 0.333h
+    D :t3_3, after t3_2, 0.333h
+    E :t3_4, after t3_3, 0.333h
+    D :t3_5, after t3_4, 0.4h
+    E :t3_6, after t3_5, 0.4h
+    A :t3_7, after t3_6, 0.4h
+    B :t3_8, after t3_7, 0.4h
+    C :t3_9, after t3_8, 0.4h
+    E :t3_10, after t3_9, 0.5h
+    F :t3_11, after t3_10, 0.5h
+    A :t3_12, after t3_11, 0.5h
+    B :t3_13, after t3_12, 0.5h
+    C :t3_14, after t3_13, 0.5h
+    D :t3_15, after t3_14, 0.5h
+
+    section Исполнитель 4
+    D :t4_1, 00:00, 2h
+    E :t4_2, after t4_1, 0.333h
+    C :t4_3, after t4_2, 0.333h
+    D :t4_4, after t4_3, 0.333h
+    C :t4_5, after t4_4, 0.4h
+    D :t4_6, after t4_5, 0.4h
+    E :t4_7, after t4_6, 0.4h
+    A :t4_8, after t4_7, 0.4h
+    B :t4_9, after t4_8, 0.4h
+    D :t4_10, after t4_9, 0.5h
+    E :t4_11, after t4_10, 0.5h
+    F :t4_12, after t4_11, 0.5h
+    A :t4_13, after t4_12, 0.5h
+    B :t4_14, after t4_13, 0.5h
+    C :t4_15, after t4_14, 0.5h
