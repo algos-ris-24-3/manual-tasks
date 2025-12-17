@@ -178,3 +178,4 @@ gantt
     A :t4_13, after t4_12, 0.5h
     B :t4_14, after t4_13, 0.5h
     C :t4_15, after t4_14, 0.5h
+```
