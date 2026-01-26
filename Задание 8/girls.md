@@ -80,18 +80,13 @@ graph LR
         4((4))
     end
     subgraph " 3 "
-        A((A))
         C((C))
     end
-    subgraph " 4 "
-        5((5))
-    end
-    E --> 4 --> A ==> 5
-    4 ==> C
+    
+    E --> 4 ==> C
     
     style 4 fill:#008000
     style C fill:#008000
-    style A fill:#008000
     style 5 fill:#008000
 ```
 
