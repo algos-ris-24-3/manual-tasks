@@ -235,7 +235,7 @@ graph LR
     subgraph " 4 "
         4((4))
     end
-    D --> 1 ==> С --> 4
+    D --> 1 ==> C --> 4
 
     style C fill:#008000
     style 1 fill:#008000
