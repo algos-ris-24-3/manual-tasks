@@ -147,3 +147,176 @@ graph LR
     E --- 3
     E --- 4
 ```
+
+```mermaid
+graph LR
+    subgraph " 1 "
+        E((E))
+    end
+    subgraph " 2 "
+        3((3))
+        4((4))
+    end
+    subgraph " 3 "
+        B((B))
+        C((C))
+        A((A))
+    end
+    subgraph " 4 "
+        2((2))
+        1((1))
+        5((5))
+    end
+    E --> 3 --> B ==> 2
+    E --> 4 ==> C --> 1
+    4 --> A ==> 5
+    
+    style 4 fill:#008000
+    style C fill:#008000
+    style B fill:#008000
+    style 5 fill:#008000
+    style 2 fill:#008000
+```
+
+Чередующаяся цепь:
+
+```mermaid
+graph LR
+    E --> 4 ==> C --> 1
+```
+
+Перекрашиваем:
+
+```mermaid
+graph LR
+    E ==> 4 --> C ==> 1
+```
+
+Проводим изменения:
+
+```mermaid
+graph LR
+    subgraph "Доля 1"
+        A((A))
+        B((B))
+        C((C))
+        D((D))
+        E((E))
+    end
+    subgraph "Доля 2"
+        1((1))
+        2((2))
+        3((3))
+        4((4))
+        5((5))
+    end
+    A === 5
+    A --- 4
+    B === 2
+    B --- 3
+    C === 1
+    C --- 4
+    D --- 1
+    E --- 3
+    E === 4
+```
+
+```mermaid
+graph LR
+    subgraph " 1 "
+        D((D))
+    end
+    subgraph " 2 "
+        1((1))
+    end
+    subgraph " 3 "
+        C((C))
+    end
+    subgraph " 4 "
+        4((4))
+    end
+    D --> 1 ==> С --> 4
+
+    style C fill:#008000
+    style 1 fill:#008000
+```
+
+Чередования:
+
+```mermaid
+graph LR
+    subgraph " 1 "
+        D((D))
+    end
+    subgraph " 2 "
+        1((1))
+    end
+    subgraph " 3 "
+        C((C))
+    end
+    subgraph " 4 "
+        4((4))
+    end
+    subgraph " 5 "
+        E((E))
+        A((A))
+    end
+    subgraph " 6 "
+        3((3))
+        5((5))
+    end
+    D --> 1 ==> C --> 4 ==> E --> 3
+    4 --> A ==> 5
+    
+    style 1 fill:#008000
+    style C fill:#008000
+    style E fill:#008000
+    style 5 fill:#008000
+```
+
+Чередующаяся цепь:
+
+```mermaid
+graph LR
+    D --> 1 ==> C --> 4 ==> E --> 3
+```
+
+Перекрашиваем:
+
+```mermaid
+graph LR
+    D ==> 1 --> C ==> 4 --> E ==> 3
+```
+
+6. Итоговый граф:
+
+```mermaid
+graph LR
+    subgraph "Доля 1"
+        A((A))
+        B((B))
+        C((C))
+        D((D))
+        E((E))
+    end
+    subgraph "Доля 2"
+        1((1))
+        2((2))
+        3((3))
+        4((4))
+        5((5))
+    end
+    A === 5
+    A --- 4
+    B === 2
+    B --- 3
+    C --- 1
+    C === 4
+    D === 1
+    E === 3
+    E --- 4
+```
+
+Все вершины покращены, значит задача решена. Минимальные назначения: [A5] [B2] [C4] [D1] [E3]. Минимальная стоимость: 8+10+7+5+9 = 39
+
+Ответ: 39
