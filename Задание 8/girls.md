@@ -179,8 +179,8 @@ graph LR
 
 ```mermaid
 graph LR
-    B((A))
-    E((C))
+    B((B))
+    E((E))
     2((2))
     3((3))
 
@@ -194,8 +194,8 @@ graph LR
 
 ```mermaid
 graph LR
-    B((A))
-    E((C))
+    B((B))
+    E((E))
     2((2))
     3((3))
 
