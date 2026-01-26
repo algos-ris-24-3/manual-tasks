@@ -141,6 +141,40 @@ graph LR
     E --- 3
     E --- 4
 ```
+Строим чередующееся дерево
+
+```mermaid
+graph LR
+    subgraph " 1 "
+        E((E))
+    end
+    subgraph " 2 "
+        3((3))
+        4((4))
+    end
+    subgraph " 3 "
+        B((B))
+        C((C))
+    end
+    subgraph " 4 "
+        2((2))
+        1((1))
+    end
+    subgraph " 5 "
+        D((D))
+    end
+    
+    E --> 3 ==> B --> 2
+    E --> 4 ==> C --> 1 ==> D
+
+    style 3 fill:#008000
+    style 4 fill:#008000
+    style 1 fill:#008000
+    style C fill:#008000
+    style B fill:#008000
+    style D fill:#008000
+```
+
 Проверим полученное паросочетание
 
 ```mermaid
