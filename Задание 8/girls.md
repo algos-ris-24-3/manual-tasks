@@ -153,11 +153,11 @@ graph LR
 
     D ==> 1 --> C ==> 4 --> E ==> 3
     
-    style A fill:#008000
+    style E fill:#008000
     style C fill:#008000
     style D fill:#008000
     style 4 fill:#008000
-    style 2 fill:#008000
+    style 1 fill:#008000
     style 3 fill:#008000
 ```
 
