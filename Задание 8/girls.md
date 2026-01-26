@@ -134,6 +134,7 @@ graph LR
     end
     A === 5
     B === 2
+    B --- 3
     C --- 1
     C === 4
     D === 1
@@ -145,19 +146,23 @@ graph LR
 ```mermaid
 graph LR
     E((E))
+    B((B))
     C((C))
     D((D))
     1((1))
+    2((2))
     3((3))
     4((4))
 
-    D ==> 1 --> C ==> 4 --> E ==> 3
+    D ==> 1 --> C ==> 4 --> E ==> 3 --> B ==> 2
     
     style E fill:#008000
+    style B fill:#008000
     style C fill:#008000
     style D fill:#008000
     style 4 fill:#008000
     style 1 fill:#008000
+    style 2 fill:#008000
     style 3 fill:#008000
 ```
 
