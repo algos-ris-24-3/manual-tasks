@@ -162,7 +162,7 @@ graph LR
     end
     
     E --> 3 ==> B --> 2
-    E --> 4 ==> C --> 1 ==> D
+    E --> 4 ==> C --> 1 
 
     style 3 fill:#008000
     style 4 fill:#008000
