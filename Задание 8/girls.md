@@ -160,9 +160,6 @@ graph LR
         2((2))
         1((1))
     end
-    subgraph " 5 "
-        D((D))
-    end
     
     E --> 3 ==> B --> 2
     E --> 4 ==> C --> 1 ==> D
