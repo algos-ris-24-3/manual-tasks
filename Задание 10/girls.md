@@ -13,56 +13,80 @@
 
 Построим остаточную сеть. Так как изначально поток в сети не задан, все дуги сети являются пустыми (локальный поток равен нулю), соответственно в остаточную сеть необходимо вынести обратную дугу с весом равным пропускной способности. 
 
-![image](https://github.com/KhudyakovaSvetlana/images/blob/main/2.jpeg)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/2_new.jpeg)
 
 ### 2. Поиск увеличивающего пути в остаточной сети
 В остаточной сети найден увеличивающий путь t -> c -> s. Минимальный вес дуг на этом пути равен 4.
 
-![image](https://github.com/KhudyakovaSvetlana/images/blob/main/3.jpeg)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/3_new.jpeg)
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-![image](../assets/max-flow-4.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/4.jpeg)
 
 Скорректируем соответствующим образом локальные потоки в исходной сети. Первым числом будем указывать локальный поток, вторым пропускную способность дуги. 
 
-![image](../assets/max-flow-5.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/5.jpeg)
 
 ### 3. Поиск увеличивающего пути в остаточной сети
 
-![image](../assets/max-flow-6.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/6.jpeg)
 
 В остаточной сети найден увеличивающий путь t -> c -> b -> s. Минимальный вес дуг на этом пути равен 2.
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-![image](../assets/max-flow-7.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/7.jpeg)
 
 Скорректируем соответствующим образом локальные потоки в исходной сети.
 
-![image](../assets/max-flow-8.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/8.jpeg)
 
 ### 4. Продолжим поиск увеличивающего пути в остаточной сети
 
-![image](../assets/max-flow-9.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/9.jpeg)
 
 В остаточной сети найден увеличивающий путь t -> c -> a -> b -> s. Минимальный вес дуг на этом пути равен 4.
 
 Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
 
-![image](../assets/max-flow-10.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/10.jpeg)
 
 Скорректируем соответствующим образом локальные потоки в исходной сети.
 
-![image](../assets/max-flow-11.png)
-
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/11.jpeg)
 
 ### 5. Продолжим поиск увеличивающего пути в остаточной сети
-В остаточной сети не найдено увеличивающих путей, следовательно, алгоритм завершил работу и найденный поток величиной 11 является максимальным для данной сети.
 
-![image](../assets/max-flow-12.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/12.jpeg)
 
-### 6. Проверим значение максимального потока перебором всех разрезов сети.
+В остаточной сети найден увеличивающий путь t -> c -> a -> b -> s. Минимальный вес дуг на этом пути равен 4.
+
+Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
+
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/13.jpeg)
+
+Скорректируем соответствующим образом локальные потоки в исходной сети.
+
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/14.jpeg)
+
+### 6. Продолжим поиск увеличивающего пути в остаточной сети
+
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/15.jpeg)
+
+В остаточной сети найден увеличивающий путь t -> c -> a -> b -> s. Минимальный вес дуг на этом пути равен 4.
+
+Уменьшим вес дуг на найденном пути, дуги для которых вес стал нулевым удалим из остаточной сети.
+
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/16.jpeg)
+
+Скорректируем соответствующим образом локальные потоки в исходной сети.
+
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/17.jpeg)
+
+## тут был пункт про проверку того, что больше нет путей, сорри что удалила
+
+### 7. Проверим значение максимального потока перебором всех разрезов сети.
 Разрез сети - разбиение множества вершин на два подмножества V<sub>1</sub> и V<sub>2</sub>, где во множество V<sub>1</sub> входит источник, а в V<sub>2</sub> входит сток.
 
 Пропускная способность разреза - сумма пропускной способности дуг, начинающихся в вершинах из множества V<sub>1</sub> и оканчивающихся в вершинах из V<sub>2</sub>.
