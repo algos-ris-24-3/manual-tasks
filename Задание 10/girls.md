@@ -123,4 +123,4 @@
 ### Ответ:
 Максимальный поток в сети равен 16, он реализуется следующим локальными потоками:
 
-![image](../assets/max-flow-11.png)
+![image](https://github.com/KhudyakovaSvetlana/images/blob/main/17.jpeg)
