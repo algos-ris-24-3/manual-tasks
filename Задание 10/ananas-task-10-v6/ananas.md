@@ -14,7 +14,7 @@
 
 Исходная сеть содержит следующие дуги с пропускными способностями:
 
-![image](image.png)
+![image](https://storage.yandexcloud.net/bigbob/Bob/image.png)
 
 ---
 
@@ -23,7 +23,7 @@
 Построим остаточную сеть. 
 Изначально локальный поток сети не задан, соответственно в остаточную сеть необходимо вынести обратную дугу с весом равным пропускной способности.
 
-![alt text](<image (2).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(2).png)
 
 ---
 
@@ -41,7 +41,7 @@ t → a → s.
 
 Δ₁ = min(8, 6) = 6.
 
-![alt text](<image (3).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(3).png)
 
 Это значит, что в исходной сети можно увеличить поток на 6 единиц вдоль пути:
 
@@ -61,7 +61,7 @@ s → a → t.
 
 Все остальные дуги остаточной сети остаются как были.
 
-![alt text](<image (4).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(4).png)
 
 **Обновление потоков в исходной сети после шага 1**
 
@@ -72,7 +72,7 @@ s → a → t.
 
 Остальные дуги пока имеют поток 0.
 Суммарный поток |f| = 6.
-![alt text](<image (5).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(5).png)
 ---
 
 #### Шаг 2. Второй увеличивающий путь
@@ -91,7 +91,7 @@ t → d → b → s.
 s → b → d → t
 
 с приращением потока 6.
-![alt text](<image (6).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(6).png)
 
 **Обновление остаточной сети после шага 2**
 
@@ -100,7 +100,7 @@ s → b → d → t
 
 Добавляем обратные дуги:
 
-![alt text](<image (7).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(7).png)
 
 Прочие дуги остаточной сети сохраняются с прежними значениями.
 
@@ -111,7 +111,7 @@ s → b → d → t
 Суммарный поток:
 
 |f| = 6 (по s→a→t) + 6 (по s→b→d→t) = 12.
-![alt text](<image (8).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(8).png)
 ---
 
 #### Шаг 3. Третий увеличивающий путь
@@ -120,7 +120,7 @@ s → b → d → t
 
 t → a → c → s.
 
-![alt text](<image (9).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(9).png)
 
 Минимальный вес на пути:
 
@@ -143,7 +143,7 @@ s → c → a → t
 - a → t: было 6, становится 6 + 2 = 8 (обратная к использованию at);
 - c → a: появляется с весом 2;
 - s → c: появляется с весом 2 (обратная к использованию sc).
-![alt text](<image (10).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(10).png)
 **Обновление потоков в исходной сети после шага 3**
 
 По пути s → c → a → t:
@@ -154,14 +154,6 @@ s → c → a → t
 
 Обновлённые потоки:
 
-- f_sa = 6,
-- f_sb = 6,
-- f_sc = 2,
-- f_ca = 2,
-- f_bd = 6,
-- f_dt = 6,
-- f_at = 8,
-
 остальные дуги по-прежнему имеют поток 0.
 
 Суммарный поток:
@@ -170,7 +162,7 @@ s → c → a → t
 - на входе в t: 8 + 6 = 14.
 
 |f| = 14.
-![alt text](<image (11)-1.png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(11).png)
 ---
 
 #### Шаг 4. Четвёртый увеличивающий путь
@@ -193,7 +185,7 @@ t → d → b → c → s.
 Это означает, что в исходной сети можем увеличить поток на 2 по пути:
 
 s → c → b → d → t.
-![alt text](<image (12).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(12).png)
 **Обновление остаточной сети после шага 4**
 
 По дугам пути t → d → b → c → s:
@@ -206,13 +198,13 @@ s → c → b → d → t.
 Добавляем/обновляем обратные дуги:
 
 После этого из вершины t в остаточной сети больше не выходит дуг с положительной остаточной пропускной способностью, т.е. увеличивающих путей от t к s больше нет — алгоритм завершает работу.
-![alt text](<image (13).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(13).png)
 **Обновление потоков в исходной сети после шага 4**
 
 По пути s → c → b → d → t увеличиваем поток на 2:
 
 Следовательно, величина потока |f| = 16.
-![alt text](<image (14).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(14).png)
 ---
 
 ### 4. Проверка максимальности потока через минимальный разрез сети
@@ -255,7 +247,7 @@ s → c → b → d → t.
 |    | **s + все вершины a, b, c, d**     |                     |                                 |
 | 16 | s, a, b, c, d                 | t                       | 16                              |
 
-![alt text](<image (16).png>)
+![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(16).png)
 
 Суммарный поток:
 
