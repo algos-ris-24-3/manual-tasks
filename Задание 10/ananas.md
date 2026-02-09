@@ -2,9 +2,9 @@
 
 Пропускная способность дуг сети указана в таблице.
 
-|          Дуги          | sa | sb | sc | ca | ab | cb | bd | dt | at |
-|:----------------------:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Пропускная способность | 6  | 6  | 4  | 5  | 5  | 5  | 10 | 8  | 8  |
+|          Дуги          | sa  | sb  | sc  | ca  | ab  | cb  | bd  | dt  | at  |
+| :--------------------: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| Пропускная способность |  6  |  6  |  4  |  5  |  5  |  5  | 10  |  8  |  8  |
 
 Вершины сети: источник **s**, сток **t**, промежуточные вершины: **a**, **b**, **c**, **d**.
 
@@ -20,10 +20,10 @@
 
 ### 2. Построим начальную остаточную сеть
 
-Построим остаточную сеть. 
+Построим остаточную сеть.
 Изначально локальный поток сети не задан, соответственно в остаточную сеть необходимо вынести обратную дугу с весом равным пропускной способности.
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(2).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(2).png>)
 
 ---
 
@@ -41,13 +41,11 @@ t → a → s.
 
 Δ₁ = min(8, 6) = 6.
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(3).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(3).png>)
 
 Это значит, что в исходной сети можно увеличить поток на 6 единиц вдоль пути:
 
 s → a → t.
-
-
 
 **Обновление остаточной сети после шага 1**
 
@@ -61,7 +59,7 @@ s → a → t.
 
 Все остальные дуги остаточной сети остаются как были.
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(4).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(4).png>)
 
 **Обновление потоков в исходной сети после шага 1**
 
@@ -72,7 +70,8 @@ s → a → t.
 
 Остальные дуги пока имеют поток 0.
 Суммарный поток |f| = 6.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(5).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(5).png>)
+
 ---
 
 #### Шаг 2. Второй увеличивающий путь
@@ -80,7 +79,6 @@ s → a → t.
 Следующий увеличивающий путь:
 
 t → d → b → s.
-
 
 Минимальный вес на пути:
 
@@ -91,16 +89,15 @@ t → d → b → s.
 s → b → d → t
 
 с приращением потока 6.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(6).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(6).png>)
 
 **Обновление остаточной сети после шага 2**
 
 По пути t → d → b → s:
 
-
 Добавляем обратные дуги:
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(7).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(7).png>)
 
 Прочие дуги остаточной сети сохраняются с прежними значениями.
 
@@ -111,7 +108,8 @@ s → b → d → t
 Суммарный поток:
 
 |f| = 6 (по s→a→t) + 6 (по s→b→d→t) = 12.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(8).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(8).png>)
+
 ---
 
 #### Шаг 3. Третий увеличивающий путь
@@ -120,7 +118,7 @@ s → b → d → t
 
 t → a → c → s.
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(9).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(9).png>)
 
 Минимальный вес на пути:
 
@@ -143,8 +141,8 @@ s → c → a → t
 - a → t: было 6, становится 6 + 2 = 8 (обратная к использованию at);
 - c → a: появляется с весом 2;
 - s → c: появляется с весом 2 (обратная к использованию sc).
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(10).png)
-**Обновление потоков в исходной сети после шага 3**
+  ![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(10).png>)
+  **Обновление потоков в исходной сети после шага 3**
 
 По пути s → c → a → t:
 
@@ -162,7 +160,8 @@ s → c → a → t
 - на входе в t: 8 + 6 = 14.
 
 |f| = 14.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(11).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(11).png>)
+
 ---
 
 #### Шаг 4. Четвёртый увеличивающий путь
@@ -185,7 +184,7 @@ t → d → b → c → s.
 Это означает, что в исходной сети можем увеличить поток на 2 по пути:
 
 s → c → b → d → t.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(12).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(12).png>)
 **Обновление остаточной сети после шага 4**
 
 По дугам пути t → d → b → c → s:
@@ -198,13 +197,14 @@ s → c → b → d → t.
 Добавляем/обновляем обратные дуги:
 
 После этого из вершины t в остаточной сети больше не выходит дуг с положительной остаточной пропускной способностью, т.е. увеличивающих путей от t к s больше нет — алгоритм завершает работу.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(13).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(13).png>)
 **Обновление потоков в исходной сети после шага 4**
 
 По пути s → c → b → d → t увеличиваем поток на 2:
 
 Следовательно, величина потока |f| = 16.
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(14).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(14).png>)
+
 ---
 
 ### 4. Проверка максимальности потока через минимальный разрез сети
@@ -224,31 +224,32 @@ s → c → b → d → t.
 
 Перечислим все разрезы, задавая V₁ и V₂, и найдём их пропускные способности.
 
-| №  | V₁                            | V₂                      | Пропускная способность разреза |
-|----|-------------------------------|-------------------------|---------------------------------|
-| 1  | s                             | a, b, c, d, t           | 16                              |
-|    | **s + одна вершина из a, b, c, d** |                         |                                 |
-| 2  | s, a                          | b, c, d, t              | 23                              |
-| 3  | s, b                          | a, c, d, t              | 20                              |
-| 4  | s, c                          | a, b, d, t              | 22                              |
-| 5  | s, d                          | a, b, c, t              | 24                              |
-|    | **s + пара вершин из a, b, c, d** |                       |                                 |
-| 6  | s, a, b                       | c, d, t                 | 22                              |
-| 7  | s, a, c                       | b, d, t                 | 24                              |
-| 8  | s, a, d                       | b, c, t                 | 31                              |
-| 9  | s, b, c                       | a, d, t                 | 21                              |
-| 10 | s, b, d                       | a, c, t                 | 18                              |
-| 11 | s, c, d                       | a, b, t                 | 30                              |
-|    | **s + три вершины из a, b, c, d** |                      |                                 |
-| 12 | s, a, b, c                    | d, t                    | 18                              |
-| 13 | s, a, b, d                    | c, t                    | 20                              |
-| 14 | s, a, c, d                    | b, t                    | 32                              |
-| 15 | s, b, c, d                    | a, t                    | 19                              |
-|    | **s + все вершины a, b, c, d**     |                     |                                 |
-| 16 | s, a, b, c, d                 | t                       | 16                              |
+| №   | V₁                                 | V₂            | Пропускная способность разреза |
+| --- | ---------------------------------- | ------------- | ------------------------------ |
+| 1   | s                                  | a, b, c, d, t | 16                             |
+|     | **s + одна вершина из a, b, c, d** |               |                                |
+| 2   | s, a                               | b, c, d, t    | 23                             |
+| 3   | s, b                               | a, c, d, t    | 20                             |
+| 4   | s, c                               | a, b, d, t    | 22                             |
+| 5   | s, d                               | a, b, c, t    | 24                             |
+|     | **s + пара вершин из a, b, c, d**  |               |                                |
+| 6   | s, a, b                            | c, d, t       | 22                             |
+| 7   | s, a, c                            | b, d, t       | 24                             |
+| 8   | s, a, d                            | b, c, t       | 31                             |
+| 9   | s, b, c                            | a, d, t       | 21                             |
+| 10  | s, b, d                            | a, c, t       | 18                             |
+| 11  | s, c, d                            | a, b, t       | 30                             |
+|     | **s + три вершины из a, b, c, d**  |               |                                |
+| 12  | s, a, b, c                         | d, t          | 18                             |
+| 13  | s, a, b, d                         | c, t          | 20                             |
+| 14  | s, a, c, d                         | b, t          | 32                             |
+| 15  | s, b, c, d                         | a, t          | 19                             |
+|     | **s + все вершины a, b, c, d**     |               |                                |
+| 16  | s, a, b, c, d                      | t             | 16                             |
 
-![alt text](https://storage.yandexcloud.net/bigbob/Bob/image%20(16).png)
+![alt text](<https://storage.yandexcloud.net/bigbob/Bob/image%20(16).png>)
 
-Суммарный поток:
+Минимальная пропускная способность разреза равна 16 ( {s, a, b, c, d} / {t} ) или ( {s} / {t, a, b, c, d} ), что совпадает с найденной величиной максимального потока в сети.
 
-6 + 6 + 2 + 2 = 16.
+Ответ:
+Максимальный поток в сети равен 16, он реализуется следующим локальными потоками:
